@@ -1,0 +1,13 @@
+<%- include("partials/header") -%>        <!--included the header partial both ways are correct in their own -->
+<!-- <div class="d-grid gap-2 d-md-flex justify-content-md-end"> -->
+<button type="button" class="btn btn-outline-dark" id="fixedbutton"><a href="/compose"><div id="compose">Compose</div></a></button>
+<!-- </div> -->
+<%  postArray.forEach( function(post) {%>
+    <h1><%=post.title%></h1>
+    <p>
+        <%=post.data.substring(0,100)+"..."%>
+        <a href="http://localhost:3000/posts/<%=post.title%>">Read more</a>
+    </p>
+    <%  });%>
+
+ <%- include("partials/footer") %>       <!--included the footer partial -->
